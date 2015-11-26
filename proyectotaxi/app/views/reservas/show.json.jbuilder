@@ -1,0 +1,1 @@
+json.extract! @reserva, :id, :fecha, :direccion_salida, :distrito_salida, :direccion_llegada, :distrito_llegada, :modalidad, :referencia, :fecha_recojo, :hora_recojo, :tiempo, :pedido, :user_id, :created_at, :updated_at

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Services</title>
+		<meta charset="utf-8">
+		<meta name = "format-detection" content = "telephone=no" />
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="shortcut icon" href="/assets/favicon.ico" />
+		<link rel="stylesheet" href="/assets/style.css">
+		<script src="/assets/jquery.js"></script>
+		<script src="/assets/jquery-migrate-1.2.1.js"></script>
+		<script src="/assets/script.js"></script>
+		<script src="/assets/superfish.js"></script>
+		<script src="/assets/jquery.ui.totop.js"></script>
+		<script src="/assets/jquery.equalheights.js"></script>
+		<script src="/assets/jquery.mobilemenu.js"></script>
+		<script src="/assets/jquery.easing.1.3.js"></script>
+		<script>
+			$(document).ready(function(){
+				$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+	</head>
+	<body class="" id="top">
+		<div class="main">
+<!--==============================Cabezera=================================-->
+			<header>
+				<div class="menu_block ">
+					<div class="container_12">
+						<div class="grid_12">
+							<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+								<ul class="sf-menu">
+									<li><a href=<%= root_path %>>Home</a></li>
+									<li><a href=<%= home_about_path %>>Sobre Nosotros</a></li>
+									<li><a href=<%= home_register_path %>>Registro</a></li>
+									<li><a href=<%= home_reservation_path %>>Reservas</a></li>
+									<li class="current"><a href=<%= home_services_path %>>Servicios</a></li>
+									<li><a href=<%= home_contact_path %>>Contactos</a></li>
+								</ul>
+							</nav>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="container_12">
+					<div class="grid_12">
+						<h1>
+							<a href=<%= root_path %>>
+								<%= image_tag @empresa.imagen_3.url(:medium) %>
+							</a>
+						</h1>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</header>
+<!--==============================Content=================================-->
+			<div class="content"><div class="ic"></div>
+				<div class="container_12">
+					<div class="grid_12">
+						<h3>Nuestros Servicios</h3>
+					</div>
+					<% @services.each do |servicio| %>
+					<div class="grid_4">
+						<div class="box">
+							<div class="maxheight">
+						        <%= image_tag servicio.imagen_4.url(:big) %>							
+								<div class="text1 color2">
+									<a href="#"><%= servicio.titulo %></a>
+								</div>
+								<%= servicio.description %>
+								<br>
+							</div>
+						</div>
+					</div>
+					<% end %>
+					<div class="clear"></div>
+					</div>
+			</div>
+		</div>
+<!--==============================footer=================================-->
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="f_phone"><span>Llamenos:</span><%= @empresa.telefono %></div>
+					<div class="socials">
+						<a href="http://www.twitter.com" class="fa fa-twitter"></a>
+						<a href="http://www.facebook.com" class="fa fa-facebook"></a>
+						<a href="http://www.google.com" class="fa fa-google-plus"></a>
+					</div>
+					<div class="copy">
+						<div class="st1">
+						<div class="brand"><span class="color1"><%= @empresa.name %></span></div>
+						&copy; 2015	| <a href="#">Derechos Reservados</a> </div> Website diseñado por <a href="http://www.upc.edu.pe/" rel="nofollow">Install 5 s.a.c</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</footer>
+	</body>
+</html>

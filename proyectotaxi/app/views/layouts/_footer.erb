@@ -1,0 +1,26 @@
+<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="f_phone"><span>Llamenos:</span><%= @empresa.telefono %></div>
+					<div class="socials">
+						<a href="http://www.twitter.com" class="fa fa-twitter" target="_blank"></a>
+						<a href="http://www.facebook.com" class="fa fa-facebook" target="_blank"></a>
+						<a href="http://www.google.com" class="fa fa-google-plus" target="_blank"></a>
+					</div>
+					<div class="copy">
+						<div class="st1">
+						<div class="brand"><span class="color1">INSTALL 5<!--<%= @empresa.name %>--></span></div>
+						&copy; 2015	| <a href="#">Derechos Reservados</a> </div> Website diseñado por <a href="#" rel="nofollow">INSTALL 5</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<% if driver_signed_in?%>
+			<p>Session iniciada Conductores</p>
+				<p><%= link_to 'Finalizar Sesión', destroy_driver_session_path, method: :delete %></p>
+			<% else %>
+			<p>
+				<%= link_to 'Iniciar sesión Conductores', new_driver_session_path %>
+			</p>
+			<% end %>
+		</footer>

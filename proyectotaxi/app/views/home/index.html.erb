@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8">
+		<meta name = "format-detection" content = "telephone=no" />
+		<link rel="icon" href="/assets/favicon.ico">
+		<link rel="shortcut icon" href="/assets/favicon.ico" />
+		<link rel="stylesheet" href="/assets/booking.css">
+		<link rel="stylesheet" href="/assets/camera.css">
+		<link rel="stylesheet" href="/assets/owl.carousel.css">
+		<link rel="stylesheet" href="/assets/style.css">
+		<script src="/assets/jquery.js"></script>
+		<script src="/assets/jquery-migrate-1.2.1.js"></script>
+		<script src="/assets/script.js"></script>
+		<script src="/assets/superfish.js"></script>
+		<script src="/assets/jquery.ui.totop.js"></script>
+		<script src="/assets/jquery.equalheights.js"></script>
+		<script src="/assets/jquery.mobilemenu.js"></script>
+		<script src="/assets/jquery.easing.1.3.js"></script>
+		<script src="/assets/owl.carousel.js"></script>
+		<script src="/assets/camera.js"></script>
+		<script src="/assets/jquery.mobile.customized.min.js"></script>
+		<script src="/assets/booking.js"></script>
+		<script>
+			$(document).ready(function(){
+				jQuery('#camera_wrap').camera({
+					loader: false,
+					pagination: false ,
+					minHeight: '444',
+					thumbnails: false,
+					height: '28.28125%',
+					caption: true,
+					navigation: true,
+					fx: 'mosaic'
+				});
+				$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+	</head>
+	<body class="page1" id="top">
+		<div class="main">
+<!--==============================Cabezera=================================-->
+			<header>
+				<div class="menu_block ">
+					<div class="container_12">
+						<div class="grid_12">
+							<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+								<ul class="sf-menu">
+									<li class="current"><a href=<%= root_path %>>Home</a></li>
+									<li><a href=<%= home_about_path %>>Sobre Nosotros</a></li>
+									<li><a href=<%= home_register_path %>>Registro</a></li>
+									<li><a href=<%= home_reservation_path %>>Reservas</a></li>
+									<li><a href=<%= home_services_path %>>Servicios</a></li>
+									<li><a href=<%= home_contact_path %>>Contactos</a></li>
+								</ul>
+							</nav>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="container_12">
+					<div class="grid_12">
+						<h1>
+							<a href=<%= root_path %>>
+								<%= image_tag @empresa.imagen_3.url(:medium) %>
+							</a>
+						</h1>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</header>
+			<div class="slider_wrapper ">
+				<div id="camera_wrap" class="">
+					<div data-src="/assets/slide.jpg" ></div>
+					<div data-src="/assets/slide1.jpg" ></div>
+					<div data-src="/assets/slide2.jpg"></div>
+				</div>
+			</div>
+			<div class="container_12">
+				<div class="grid_4">
+					<div class="banner">
+						<div class="maxheight">
+							<div class="banner_title">
+								<img src="/assets/icon1.png" alt="">
+								<div class="extra_wrapper">Rápido&amp;
+									<div class="color1">Seguro</div>
+								</div>
+							</div>
+							<!-- Se modifica esta linea -->
+							La forma más fácil y rápida de pedir un taxi, bien llamando al 511-999-99999 o a través de nuestra pagina web. Nuestro sistema es capaz de averiguar dónde estás y mandarte el taxi libre más cercano.
+							<a href="#" class="fa fa-share-square"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_4">
+					<div class="banner">
+						<div class="maxheight">
+							<div class="banner_title">
+								<img src="/assets/icon2.png" alt="">
+								<div class="extra_wrapper">Mejores
+									<div class="color1">Precios</div>
+								</div>
+							</div>
+							<!-- Se modifica esta linea -->
+							Nuestros servicios de taxi pueden ayudarle a ahorrar algunas buenas cantidades si se usan correctamente. En vista del gran número de operadores de taxis en Lima, puede encontrar en nosotros un proveedor de servicios que le cobrará tarifas que se encuentran dentro de su presupuesto. Sin embargo, aunque el precio es un factor determinante importante, nosotros también ofrecemos un servicio de calidad y totalmente confiable.
+							<a href="#" class="fa fa-share-square"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_4">
+					<div class="banner">
+						<div class="maxheight">
+							<div class="banner_title">
+								<img src="/assets/icon3.png" alt="">
+								<div class="extra_wrapper">Atencion
+									<div class="color1">24 Horas</div>
+								</div>
+							</div>
+							<!-- Se modifica esta linea -->
+							Nuestro servicio de taxi seguro está disponible las 24 horas del día, los 7 días de la semana y los 365 días del año, de modo que si Usted necesita los servicios a las últimas horas de la noche, nosotros estaremos ahí.
+							<a href="#" class="fa fa-share-square"></a>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="c_phone">
+				<div class="container_12">
+					<div class="grid_12">
+						<div class="fa fa-phone"></div><%= @empresa.telefono %>
+						<span>SOLICITA AHORA!</span>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+<!--==============================Fin de Cabezera=================================-->
+<!--==============================Pie=================================-->
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="f_phone"><span>Llamenos:</span><%= @empresa.telefono %></div>
+					<div class="socials">
+						<a href="http://www.twitter.com" class="fa fa-twitter"></a>
+						<a href="http://www.facebook.com" class="fa fa-facebook"></a>
+						<a href="http://www.google.com" class="fa fa-google-plus"></a>
+					</div>
+					<div class="copy">
+						<div class="st1">
+						<div class="brand"><span class="color1"><%= @empresa.name %></span></div>
+						&copy; 2015	| <a href="#">Derechos Reservados</a> </div> Website diseñado por <a href="http://www.upc.edu.pe/" rel="nofollow">Install 5 s.a.c</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<% if driver_signed_in?%>
+			<p>Session iniciada Conductores</p>
+				<p><%= link_to 'Finalizar Sesión', destroy_driver_session_path, method: :delete %></p>
+			<% else %>
+			<p>
+				<%= link_to 'Iniciar sesión Conductores', new_driver_session_path %>
+			</p>
+			<% end %>
+
+		</footer>
+	</body>
+</html>

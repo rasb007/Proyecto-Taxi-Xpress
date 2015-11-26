@@ -1,0 +1,19 @@
+<h1>Ha Solicitado un Taxi</h1>
+
+<p>
+  Usuario: <%= @sender_name %><br>
+  Reserva:<br>
+  fecha : <%= @reserva.fecha %><br>
+  Dirección de Partida : <%= @reserva.direccion_salida %><br>
+  Distrito de Partida  : <%= @reserva.distrito_salida %><br>
+  Dirección de Destino : <%= @reserva.direccion_llegada %><br>
+  Distrito de Destino  : <%= @reserva.distrito_llegada %><br>
+  Modalidad            : <%= @reserva.modalidad %><br>
+  Referencia           : <%= @reserva.referencia %><br>
+  Fecha de Recojo      : <%= @reserva.fecha_recojo %><br>
+  Hora de Recojo       : <%= @reserva.hora_recojo %><br>
+  Observación          : <strong><%= @reserva.pedido %></strong><br>
+  El costo             : <%= @precio %> Nuevos Soles<br>
+  Gracias<br>
+  Webiste
+</p>

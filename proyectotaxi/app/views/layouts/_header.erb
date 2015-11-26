@@ -1,0 +1,31 @@
+<header>
+<div class="menu_block ">
+					<div class="container_12">
+						<div class="grid_12">
+<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+								<ul class="sf-menu">
+									<li class="current"><a href=<%= root_path %>>Home</a></li>
+									<li><a href=<%= home_about_path %>>Nosotros</a></li>
+									<li><a href=<%= home_register_path %>>Registro</a></li>
+									<li><a href=<%= home_reservation_path %>>Reservas</a></li>
+									<li><a href=<%= home_services_path %>>Servicios</a></li>
+									<li><a href=<%= home_contact_path %>>Contactos</a></li>
+								</ul>
+							</nav>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				
+					<div class="container_12">
+					<div class="grid_12">
+						<h1>
+							<a href=<%= root_path %>>
+								<%= image_tag @empresa.imagen_3.url(:medium) %>
+							</a>
+						</h1>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</header>

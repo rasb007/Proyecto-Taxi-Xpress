@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 2015-11-18
+  direccion_salida: MyString
+  distrito_salida: MyString
+  direccion_llegada: MyString
+  distrito_llegada: MyString
+  modalidad: MyString
+  referencia: MyString
+  fecha_recojo: 2015-11-18
+  hora_recojo: MyString
+  tiempo: MyString
+  pedido: MyString
+  user_id: 
+
+two:
+  fecha: 2015-11-18
+  direccion_salida: MyString
+  distrito_salida: MyString
+  direccion_llegada: MyString
+  distrito_llegada: MyString
+  modalidad: MyString
+  referencia: MyString
+  fecha_recojo: 2015-11-18
+  hora_recojo: MyString
+  tiempo: MyString
+  pedido: MyString
+  user_id: 
